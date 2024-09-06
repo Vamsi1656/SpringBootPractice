@@ -1,0 +1,5 @@
+package Course.repo;
+
+public interface CourseRepository {
+
+}

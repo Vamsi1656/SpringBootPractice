@@ -1,0 +1,15 @@
+package com.course.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import Course.repo.CourseRepository;
+
+@Service
+public class CourseServiceImpl {
+	
+	
+	@Autowired
+	private CourseRepository courserepo;
+
+}

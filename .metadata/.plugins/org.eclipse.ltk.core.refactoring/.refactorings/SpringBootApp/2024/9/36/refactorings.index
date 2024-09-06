@@ -1,0 +1,10 @@
+1725534633424	Rename type 'Entity'
+1725535151668	Rename type 'Service'
+1725535974893	Delete element
+1725601713760	Rename package 'Entities'
+1725602163404	Move compilation unit
+1725602335749	Copy package
+1725602342723	Delete element
+1725602396801	Rename package 'com.course.service'
+1725602422824	Rename package 'com.course.controller'
+1725602450062	Rename package 'Course.repo'

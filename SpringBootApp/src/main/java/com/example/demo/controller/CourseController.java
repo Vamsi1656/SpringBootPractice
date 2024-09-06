@@ -37,7 +37,7 @@ public class CourseController {
 		
 	}
 	
-	
+	@GetMapping("/course/allcourses")
 	public ResponseEntity<List<Course>> getAllCourses(){
 		
 		List<Course>allCourses=service.getAllCourses();

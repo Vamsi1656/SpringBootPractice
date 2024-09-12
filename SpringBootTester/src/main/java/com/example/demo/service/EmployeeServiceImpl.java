@@ -39,13 +39,17 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public List<Employee> getAllEmployees() {
 		
-		return null;
+		return repo.findAll();
 	}
 
 	@Override
 	public String deleteById(Integer Id) {
 		
-		return null;
+		if(repo.existsById(Id)) {
+			repo.deleteById(Id);
+			return "delete success";
+		}
+		return "Not found";
 	}
 	
 	

@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,32 +17,37 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public String upsert(Students st) {
-		// TODO Auto-generated method stub
-		return null;
+	     repo.save(st);
+		return "success";
 	}
 
 	@Override
 	public Students getById(Integer Id) {
-		// TODO Auto-generated method stub
+		Optional<Students> findById= repo.findById(Id);
+		if(findById.isPresent()) {
+			return findById.get();
+		}
 		return null;
 	}
 
 	@Override
 	public List<Students> getAllStudents() {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.findAll();
+		
 	}
 
 	@Override
 	public List<Students> getAllCourses() {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.findAll();
 	}
 
 	@Override
 	public String deleteById(Integer Id) {
-		// TODO Auto-generated method stub
-		return null;
+		if(repo.existsById(Id)) {
+			repo.deleteById(Id);
+			return "delete success";
+		}
+		return "Not found";
 	}
 
 }

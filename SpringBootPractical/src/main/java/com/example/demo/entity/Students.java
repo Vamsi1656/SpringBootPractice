@@ -31,7 +31,7 @@ public class Students {
 	private double paidfee;
 	
 	@Column(name="Sturemainingfee")
-	private double reaminingfee;
+	private double remainingfee;
 	
 
 }
